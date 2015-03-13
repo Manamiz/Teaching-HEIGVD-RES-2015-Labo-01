@@ -27,7 +27,7 @@ public class DFSFileExplorerTest {
     final List<String> directories = new ArrayList<>();
     IFileExplorer explorer = new DFSFileExplorer();
 
-    explorer.explore(new File("./fs-test"), new IFileVisitor() {
+        explorer.explore(new File("./fs-test"), new IFileVisitor() {
       @Override
       public void visit(File file) {
         directories.add(file.getName());

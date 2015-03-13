@@ -28,10 +28,19 @@ public class UtilsTest {
     String lines = "hello\rworld\r";
     String[] r1 = Utils.getNextLine(lines);
     String[] e1 = {"hello\r", "world\r"};
+    
     assertArrayEquals(e1, r1);
     String[] r2 = Utils.getNextLine(r1[1]);
     String[] e2 = {"world\r", ""};
+
+    System.out.println("Obtenu:");
+    System.out.println(r2[0] + " | " + r2[1]);
+    System.out.println("Attendu:");
+    System.out.println(e2[0] + " | " + e2[1]);
+    
     assertArrayEquals(e2, r2);
+    
+    
   }
 
   @Test
